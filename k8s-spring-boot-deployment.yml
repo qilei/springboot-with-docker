@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: jhooq-springboot
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: jhooq-springboot
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: springboot
-          image: rahulwagh17/jhooq-docker-demo:jhooq-docker-demo
+          image: qilei2010/jhooq-docker-demo:jhooq-docker-demo
           ports:
             - containerPort: 8080
           env:
